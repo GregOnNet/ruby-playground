@@ -14,6 +14,7 @@ describe 'Searching for a video' do
     visit ''
     fill_in('search_query', with: 'text adventures')
     click_button('search-btn')
-    page.should have_content('GET LAMP: The Text Adventure Documentary')
+
+    expect(page).to have_content('GET LAMP: The Text Adventure Documentary')
   end
 end
